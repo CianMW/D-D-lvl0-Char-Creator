@@ -1,0 +1,11 @@
+body{
+    background-color: gray;
+}
+
+.btn:active{
+    position: absolute;
+    transform: translateY(5px);
+}
+#character-container{
+    border: 1px solid black;
+}
