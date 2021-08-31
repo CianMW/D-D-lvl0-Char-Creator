@@ -1,5 +1,15 @@
 
-
+Const raceTable = {
+    "1-5": "Elf",
+    "6-10": "Halfling",
+    "11-15": "Dwarf",
+    "16-95": "Human",
+    96: "Dragonborn",
+    97: "Gnome",
+    98: "Half-elf",
+    99: "Half-orc",
+    100: "Tiefling",
+}
 
 
 
@@ -29,6 +39,15 @@ const randomIntegerD4 = () =>{
 }
 
 
+let statRoller = () =>{
+
+let stat = 0
+    for (let i = 0; i <= 3; i++) {
+        stat += randomIntegerD6
+        
+    }
+}
+
 function getWildEncounter() {
     let value = Math.floor((Math.random()*100)+1);
      for( var range in wildernessEncounters ) {
@@ -37,9 +56,9 @@ function getWildEncounter() {
          if( value >= parseInt(split[0]) && value <= parseInt(split[1] || split[0]) )
              return wildernessEncounters[range]}}
 
-const randomNumberTest = () => {
+//const randomNumberTest = () => {
 
-let arrayTemp = []
+/*let arrayTemp = []
     for (let i = 0; i < 100; i++) {
 
         
@@ -47,6 +66,35 @@ let arrayTemp = []
         
     }
     return arrayTemp
-}
+}*/
 
-console.log(randomNumberTest())
+const createCharacter = () =>{
+
+    //creating containers first
+    let newConatinerNode = document.createElement("div")
+    let gender = ""
+    let race = generateRace()
+    let strength = 
+    
+
+
+    let generateGender = randomIntegerD4()
+    if (generateGeneder > 2) {
+        gender = "male"
+        
+    } else {
+        gender = "female"
+    }
+
+function generateRace() {
+        let value = randomIntegerD100();
+         for( var range in raceTable ) {
+             var split = range.split("-");
+     
+             if( value >= parseInt(split[0]) && value <= parseInt(split[1] || split[0]) )
+                 return raceTable[range]}}
+    
+
+
+
+}
