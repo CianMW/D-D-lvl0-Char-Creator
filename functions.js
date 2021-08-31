@@ -1,5 +1,4 @@
-
-Const raceTable = {
+let raceTable = {
     "1-5": "Elf",
     "6-10": "Halfling",
     "11-15": "Dwarf",
@@ -10,6 +9,8 @@ Const raceTable = {
     99: "Half-orc",
     100: "Tiefling",
 }
+
+
 
 
 
@@ -74,7 +75,13 @@ const createCharacter = () =>{
     let newConatinerNode = document.createElement("div")
     let gender = ""
     let race = generateRace()
-    let strength = 
+    let strength = statRoller()
+    let dexterity = statRoller()
+    let constitution = statRoller()
+    let intelligence = statRoller()
+    let wisdom = statRoller()
+    let charisma = statRoller()
+
     
 
 
