@@ -191,29 +191,41 @@ const createCharacter = () =>{
 const getFeatures = () =>{
 
     if (race === "Elf") {
+        dexterity +=2
+        return "Fey Ancestry:  Elves and half-elves have advantage on saving throws against being charmed, and magic cannot put them to sleep."
         
-    } else if (race === ""){
-
+    } else if (race === "Dwarf"){
+        constitution += 2
+        return "Dwarven Resilience Dwarves have advantage on saving throws against poison. They also have resistance against poison damage."
+    
+    } else if (race === "Gnome"){
+        intelligence += 2
+        constitution += 1
+        return "Gnome Cunning Gnomes have advantage on Intelligence, Wisdom, and Charisma saving throws against magic."
+    
+    } else if (race === "Tiefling"){
+        intelligence += 1
+        charisma += 2
+        return "Hellish Resistance Tieflings have resistance to fire damage."
+    
+    } else if (race === "Halfling"){
+        dexterity += 2 
+        return "Lucky When a halfling rolls a 1 on the d20 for an attack roll, ability check, or saving throw, the halfling can reroll the die and must use the new roll.  Brave Halflings have advantage on saving throws against being frightened."
+    
+    } else if (race === "Half-orc"){
+        strength +=2
+        constitution += 1
+        return "Relentless Endurance When a half-orc is reduced to 0 hit points but not killed outright, it can drop to 1 hit point instead. You cannot use this feature again until you finish a long rest."
+    
+    } else if (race === "Dragonborn"){
+        strength += 2
+        charisma += 1
+        return ""
+    
+    } else (race === "Human"){
+        return ""
     }
-    } else if (race === ""){
 
-    }
-    } else if (race === ""){
-
-    }
-    } else if (race === ""){
-
-    }
-    } else if (race === ""){
-
-    }
-    } else if (race === ""){
-
-    }
-    } else (race === ""){
-
-    }
-}
 }
 
 
